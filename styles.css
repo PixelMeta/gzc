@@ -2,7 +2,8 @@ html, body {
     height: 100%;
     margin: 0;
     padding: 0;
-    overflow: hidden;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+    overflow-y: auto; /* Enable vertical scrolling */
 }
 
 body {
@@ -170,5 +171,5 @@ body > * {
 
 .footer .home-button {
     margin-left: auto; /* Pushes button to the left */
-    margin-right: 40px;
+    margin-right: 0px;
 }

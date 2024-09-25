@@ -18,7 +18,17 @@
     <div class="button-container">
         <img src="/Jay45V.webp" alt="a" class="admin">
         <img src="/Samis.webp" alt="a" class="admin">
-        <img src="https://cdn.discordapp.com/avatars/1219221442898563118/69ba0c4fd192af751a9fb82c97720701.webp" alt="a" class="admin">
+        <img id="discordPfp" src="https://cdn.discordapp.com/avatars/1219221442898563118/69ba0c4fd192af751a9fb82c97720701.webp" alt="a" class="admin">
+        <script>
+            const userId = '1272613718114570353';
+            fetch(`/getPfp/${userId}`)
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('discordPfp').src = data.pfpUrl;
+                })
+                .catch(error => console.error('Error fetching Discord profile:', error));
+        </script>
+
         <img src="/Tech.webp" alt="a" class="admin">
         <img src="/Zions.webp" alt="a" class="admin">
         <img src="/chi_yu2.webp" alt="a" class="admin">
